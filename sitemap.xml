@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://FNALLPC.github.io/cmsdas-cat-gitlab-cms/01-introduction.html</loc>
+  </url>
+  <url>
+    <loc>https://FNALLPC.github.io/cmsdas-cat-gitlab-cms/02-cmsswexercise.html</loc>
+  </url>
+  <url>
+    <loc>https://FNALLPC.github.io/cmsdas-cat-gitlab-cms/03-gitlabci-setenv.html</loc>
+  </url>
+  <url>
+    <loc>https://FNALLPC.github.io/cmsdas-cat-gitlab-cms/04-gitlabci-run-analysis.html</loc>
+  </url>
+  <url>
     <loc>https://FNALLPC.github.io/cmsdas-cat-gitlab-cms/404.html</loc>
   </url>
   <url>
@@ -10,10 +22,28 @@
     <loc>https://FNALLPC.github.io/cmsdas-cat-gitlab-cms/LICENSE.html</loc>
   </url>
   <url>
+    <loc>https://FNALLPC.github.io/cmsdas-cat-gitlab-cms/aio.html</loc>
+  </url>
+  <url>
     <loc>https://FNALLPC.github.io/cmsdas-cat-gitlab-cms/citation.html</loc>
   </url>
   <url>
+    <loc>https://FNALLPC.github.io/cmsdas-cat-gitlab-cms/images.html</loc>
+  </url>
+  <url>
     <loc>https://FNALLPC.github.io/cmsdas-cat-gitlab-cms/index.html</loc>
+  </url>
+  <url>
+    <loc>https://FNALLPC.github.io/cmsdas-cat-gitlab-cms/instructor/01-introduction.html</loc>
+  </url>
+  <url>
+    <loc>https://FNALLPC.github.io/cmsdas-cat-gitlab-cms/instructor/02-cmsswexercise.html</loc>
+  </url>
+  <url>
+    <loc>https://FNALLPC.github.io/cmsdas-cat-gitlab-cms/instructor/03-gitlabci-setenv.html</loc>
+  </url>
+  <url>
+    <loc>https://FNALLPC.github.io/cmsdas-cat-gitlab-cms/instructor/04-gitlabci-run-analysis.html</loc>
   </url>
   <url>
     <loc>https://FNALLPC.github.io/cmsdas-cat-gitlab-cms/instructor/404.html</loc>
@@ -25,13 +55,25 @@
     <loc>https://FNALLPC.github.io/cmsdas-cat-gitlab-cms/instructor/LICENSE.html</loc>
   </url>
   <url>
+    <loc>https://FNALLPC.github.io/cmsdas-cat-gitlab-cms/instructor/aio.html</loc>
+  </url>
+  <url>
     <loc>https://FNALLPC.github.io/cmsdas-cat-gitlab-cms/instructor/citation.html</loc>
+  </url>
+  <url>
+    <loc>https://FNALLPC.github.io/cmsdas-cat-gitlab-cms/instructor/images.html</loc>
   </url>
   <url>
     <loc>https://FNALLPC.github.io/cmsdas-cat-gitlab-cms/instructor/index.html</loc>
   </url>
   <url>
+    <loc>https://FNALLPC.github.io/cmsdas-cat-gitlab-cms/instructor/instructor-notes.html</loc>
+  </url>
+  <url>
     <loc>https://FNALLPC.github.io/cmsdas-cat-gitlab-cms/instructor/introduction.html</loc>
+  </url>
+  <url>
+    <loc>https://FNALLPC.github.io/cmsdas-cat-gitlab-cms/instructor/key-points.html</loc>
   </url>
   <url>
     <loc>https://FNALLPC.github.io/cmsdas-cat-gitlab-cms/instructor/profiles.html</loc>
@@ -40,7 +82,13 @@
     <loc>https://FNALLPC.github.io/cmsdas-cat-gitlab-cms/instructor/reference.html</loc>
   </url>
   <url>
+    <loc>https://FNALLPC.github.io/cmsdas-cat-gitlab-cms/instructor-notes.html</loc>
+  </url>
+  <url>
     <loc>https://FNALLPC.github.io/cmsdas-cat-gitlab-cms/introduction.html</loc>
+  </url>
+  <url>
+    <loc>https://FNALLPC.github.io/cmsdas-cat-gitlab-cms/key-points.html</loc>
   </url>
   <url>
     <loc>https://FNALLPC.github.io/cmsdas-cat-gitlab-cms/profiles.html</loc>
