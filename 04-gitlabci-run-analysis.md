@@ -175,8 +175,8 @@ check_events:
     - mkdir -p AnalysisCode
     - cp -r $CI_PROJECT_DIR/ZPeakAnalysis AnalysisCode/
     - cd AnalysisCode/ZPeakAnalysis/
-    - python3 test/check_number_events.py --input ${CMSSW_RELEASE}/src/AnalysisCode/ZPeakAnalysis/myZPeak.root
-    - python3 test/check_cutflows.py number_of_events.txt test/number_of_expected_events.txt
+    - python test/check_number_events_cmssw10.py --input ${CMSSW_RELEASE}/src/AnalysisCode/ZPeakAnalysis/myZPeak.root
+    - python test/check_cutflows_cmssw10.py number_of_events.txt test/number_of_expected_events.txt
 ```
 
 For the compiled code to be available in subsequent steps, the artifacts must be explicitly defined. In the `cmssw_compile` job, we specify:
