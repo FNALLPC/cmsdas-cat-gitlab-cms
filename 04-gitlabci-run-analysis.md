@@ -38,7 +38,7 @@ First, ensure the analysis code is committed to your GitLab repository:
 
 ```bash
 # Inside your gitlab repository cmsdas-gitlab-cms/
-# Download and unzip the analysis code (https://alefisico.github.io/cmsdas-cat-gitlab-cms/files/ZPeakAnalysis.zip)
+# Download and unzip the analysis code (wget https://github.com/FNALLPC/cmsdas-cat-gitlab-cms/raw/refs/heads/main/episodes/files/ZPeakAnalysis.zip)
 git add ZPeakAnalysis/
 git commit -m "Add analysis code"
 git push
@@ -69,9 +69,9 @@ cmssw_setup:
     - cmsRun test/MyZPeak_cfg.py
     - ls -l myZPeak.root
     - echo "Checking number of events"
-    - python3 test/check_number_events.py
+    - python test/check_number_events_cmssw10.py
     - echo "Testing output"
-    - python3 test/check_cutflows.py number_of_events.txt test/number_of_expected_events.txt
+    - python test/check_cutflows_cmssw10.py number_of_events.txt test/number_of_expected_events.txt
 ```
 
 ::::: discussion
