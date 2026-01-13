@@ -558,8 +558,8 @@ the setup.</li>
 <span id="cb3-81"><a href="#cb3-81" tabindex="-1"></a><span class="at">    </span><span class="kw">-</span><span class="at"> mkdir -p AnalysisCode</span></span>
 <span id="cb3-82"><a href="#cb3-82" tabindex="-1"></a><span class="at">    </span><span class="kw">-</span><span class="at"> cp -r $CI_PROJECT_DIR/ZPeakAnalysis AnalysisCode/</span></span>
 <span id="cb3-83"><a href="#cb3-83" tabindex="-1"></a><span class="at">    </span><span class="kw">-</span><span class="at"> cd AnalysisCode/ZPeakAnalysis/</span></span>
-<span id="cb3-84"><a href="#cb3-84" tabindex="-1"></a><span class="at">    </span><span class="kw">-</span><span class="at"> python3 test/check_number_events.py --input ${CMSSW_RELEASE}/src/AnalysisCode/ZPeakAnalysis/myZPeak.root</span></span>
-<span id="cb3-85"><a href="#cb3-85" tabindex="-1"></a><span class="at">    </span><span class="kw">-</span><span class="at"> python3 test/check_cutflows.py number_of_events.txt test/number_of_expected_events.txt</span></span></code></pre>
+<span id="cb3-84"><a href="#cb3-84" tabindex="-1"></a><span class="at">    </span><span class="kw">-</span><span class="at"> python test/check_number_events_cmssw10.py --input ${CMSSW_RELEASE}/src/AnalysisCode/ZPeakAnalysis/myZPeak.root</span></span>
+<span id="cb3-85"><a href="#cb3-85" tabindex="-1"></a><span class="at">    </span><span class="kw">-</span><span class="at"> python test/check_cutflows_cmssw10.py number_of_events.txt test/number_of_expected_events.txt</span></span></code></pre>
 </div>
 <p>For the compiled code to be available in subsequent steps, the
 artifacts must be explicitly defined. In the <code>cmssw_compile</code>
