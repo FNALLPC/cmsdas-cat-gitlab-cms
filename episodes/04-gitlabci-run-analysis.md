@@ -63,6 +63,7 @@ cmssw_setup:
     - echo "Copying analysis code"
     - mkdir -p AnalysisCode
     - cp -r $CI_PROJECT_DIR/ZPeakAnalysis AnalysisCode/
+    - scram b -j 4
     - cd AnalysisCode/ZPeakAnalysis/
     - echo "Running analysis code"
     - cmsRun test/MyZPeak_cfg.py
