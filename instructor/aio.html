@@ -861,7 +861,7 @@ ahead to the next lesson.</p>
 <button class="accordion-button instructor-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInstructor1" aria-expanded="false" aria-controls="collapseInstructor1">
   <h3 class="accordion-header" id="headingInstructor1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="edit-2"></i></div> Instructor Note </h3>
 </button>
-<div id="collapseInstructor1" class="accordion-collapse collapse" data-bs-parent="#accordionInstructor1" aria-labelledby="headingInstructor1">
+<div id="collapseInstructor1" class="accordion-collapse collapse" aria-labelledby="headingInstructor1" data-bs-parent="#accordionInstructor1">
 <div class="accordion-body">
 <p>This lesson is for newcomers with little or no prior experience with
 CMSSW. In a real class, this lesson could be skipped or shortened if the
@@ -928,7 +928,7 @@ your GitLab repository</strong>:</p>
 <button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler1" aria-expanded="false" aria-controls="collapseSpoiler1">
   <h3 class="accordion-header" id="headingSpoiler1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> If the previous command fails </h3>
 </button>
-<div id="collapseSpoiler1" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler1" aria-labelledby="headingSpoiler1">
+<div id="collapseSpoiler1" class="accordion-collapse collapse" aria-labelledby="headingSpoiler1" data-bs-parent="#accordionSpoiler1">
 <div class="accordion-body">
 <p>If you see an error about missing git configuration, set your name
 and email:</p>
@@ -1353,7 +1353,7 @@ fail.</p>
   To trigger the pipeline
   </h3>
 </button>
-<div id="collapseSpoiler1" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler1" aria-labelledby="headingSpoiler1">
+<div id="collapseSpoiler1" class="accordion-collapse collapse" aria-labelledby="headingSpoiler1" data-bs-parent="#accordionSpoiler1">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb3">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -1455,7 +1455,7 @@ environment for the release.</li>
   Special Setup for cmslpc Users
   </h3>
 </button>
-<div id="collapseSpoiler2" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler2" aria-labelledby="headingSpoiler2">
+<div id="collapseSpoiler2" class="accordion-collapse collapse" aria-labelledby="headingSpoiler2" data-bs-parent="#accordionSpoiler2">
 <div class="accordion-body">
 <p>At cmslpc, jobs typically run in your <code>nobackup</code> area
 (<code>/uscms_data/d3/USERNAME</code>). You may need to bind your
@@ -1489,7 +1489,7 @@ directories when starting a container:</p>
   Solution: Determining CMSSW-related aliases
   </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>The most important aliases are in the table below:</p>
 <table class="table">
@@ -1683,7 +1683,7 @@ any links that you are not going to use.
 </div>
 </section></section><section id="aio-04-gitlabci-run-analysis"><p>Content from <a href="04-gitlabci-run-analysis.html">Running a CMSSW analysis in GitLab CI/CD</a></p>
 <hr>
-<p>Last updated on 2026-01-08 |
+<p>Last updated on 2026-01-13 |
 
         <a href="https://github.com/FNALLPC/cmsdas-cat-gitlab-cms/edit/main/episodes/04-gitlabci-run-analysis.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 20 minutes</p>
@@ -1788,14 +1788,15 @@ the analysis with <code>cmsRun</code>:</p>
 <span id="cb2-14"><a href="#cb2-14" tabindex="-1"></a><span class="at">    </span><span class="kw">-</span><span class="at"> echo "Copying analysis code"</span></span>
 <span id="cb2-15"><a href="#cb2-15" tabindex="-1"></a><span class="at">    </span><span class="kw">-</span><span class="at"> mkdir -p AnalysisCode</span></span>
 <span id="cb2-16"><a href="#cb2-16" tabindex="-1"></a><span class="at">    </span><span class="kw">-</span><span class="at"> cp -r $CI_PROJECT_DIR/ZPeakAnalysis AnalysisCode/</span></span>
-<span id="cb2-17"><a href="#cb2-17" tabindex="-1"></a><span class="at">    </span><span class="kw">-</span><span class="at"> cd AnalysisCode/ZPeakAnalysis/</span></span>
-<span id="cb2-18"><a href="#cb2-18" tabindex="-1"></a><span class="at">    </span><span class="kw">-</span><span class="at"> echo "Running analysis code"</span></span>
-<span id="cb2-19"><a href="#cb2-19" tabindex="-1"></a><span class="at">    </span><span class="kw">-</span><span class="at"> cmsRun test/MyZPeak_cfg.py</span></span>
-<span id="cb2-20"><a href="#cb2-20" tabindex="-1"></a><span class="at">    </span><span class="kw">-</span><span class="at"> ls -l myZPeak.root</span></span>
-<span id="cb2-21"><a href="#cb2-21" tabindex="-1"></a><span class="at">    </span><span class="kw">-</span><span class="at"> echo "Checking number of events"</span></span>
-<span id="cb2-22"><a href="#cb2-22" tabindex="-1"></a><span class="at">    </span><span class="kw">-</span><span class="at"> python3 test/check_number_events.py</span></span>
-<span id="cb2-23"><a href="#cb2-23" tabindex="-1"></a><span class="at">    </span><span class="kw">-</span><span class="at"> echo "Testing output"</span></span>
-<span id="cb2-24"><a href="#cb2-24" tabindex="-1"></a><span class="at">    </span><span class="kw">-</span><span class="at"> python3 test/check_cutflows.py number_of_events.txt test/number_of_expected_events.txt</span></span></code></pre>
+<span id="cb2-17"><a href="#cb2-17" tabindex="-1"></a><span class="at">    </span><span class="kw">-</span><span class="at"> scram b -j 4</span></span>
+<span id="cb2-18"><a href="#cb2-18" tabindex="-1"></a><span class="at">    </span><span class="kw">-</span><span class="at"> cd AnalysisCode/ZPeakAnalysis/</span></span>
+<span id="cb2-19"><a href="#cb2-19" tabindex="-1"></a><span class="at">    </span><span class="kw">-</span><span class="at"> echo "Running analysis code"</span></span>
+<span id="cb2-20"><a href="#cb2-20" tabindex="-1"></a><span class="at">    </span><span class="kw">-</span><span class="at"> cmsRun test/MyZPeak_cfg.py</span></span>
+<span id="cb2-21"><a href="#cb2-21" tabindex="-1"></a><span class="at">    </span><span class="kw">-</span><span class="at"> ls -l myZPeak.root</span></span>
+<span id="cb2-22"><a href="#cb2-22" tabindex="-1"></a><span class="at">    </span><span class="kw">-</span><span class="at"> echo "Checking number of events"</span></span>
+<span id="cb2-23"><a href="#cb2-23" tabindex="-1"></a><span class="at">    </span><span class="kw">-</span><span class="at"> python3 test/check_number_events.py</span></span>
+<span id="cb2-24"><a href="#cb2-24" tabindex="-1"></a><span class="at">    </span><span class="kw">-</span><span class="at"> echo "Testing output"</span></span>
+<span id="cb2-25"><a href="#cb2-25" tabindex="-1"></a><span class="at">    </span><span class="kw">-</span><span class="at"> python3 test/check_cutflows.py number_of_events.txt test/number_of_expected_events.txt</span></span></code></pre>
 </div>
 <div id="do-you-see-any-potential-issues-with-this-job-definition" class="callout discussion">
 <div class="callout-square">
@@ -3297,7 +3298,7 @@ Choose the one that best fits your use case.</p>
 </button>
 </div>
 </nav><div id="nav-tabContent-1" class="tab-content">
-<div id="nav-tabpanel-1-1" class="tab-pane show active" aria-labelledby="nav-tab-1-1" role="tabpanel">
+<div id="nav-tabpanel-1-1" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-1-1">
 <p>If your project is in a personal namespace (not
 <code>cms-analysis</code>), use your own grid credentials stored as
 protected CI/CD variables:</p>
@@ -3337,7 +3338,7 @@ protected CI/CD variables:</p>
 <p><strong>Pros:</strong> Full control; works in any namespace.<br><strong>Cons:</strong> Requires managing your own credentials; higher
 security risk if exposed.</p>
 </div>
-<div id="nav-tabpanel-1-2" class="tab-pane" aria-labelledby="nav-tab-1-2" role="tabpanel">
+<div id="nav-tabpanel-1-2" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-1-2">
 <p>If your project is in <code>cms-analysis</code>, use the CAT EOS file
 service for simple file access:</p>
 <div class="codewrapper sourceCode" id="cb4">
@@ -3409,7 +3410,7 @@ service for simple file access:</p>
 requires no CI/CD variables.<br><strong>Cons:</strong> Only works in <code>cms-analysis</code>
 namespace; limited to CAT-hosted files.</p>
 </div>
-<div id="nav-tabpanel-1-3" class="tab-pane" aria-labelledby="nav-tab-1-3" role="tabpanel">
+<div id="nav-tabpanel-1-3" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-1-3">
 <p>For maximum flexibility, use the CAT VOMS proxy service to access any
 CMS data:</p>
 <div class="codewrapper sourceCode" id="cb5">
